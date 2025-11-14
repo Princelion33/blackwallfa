@@ -1,0 +1,95 @@
+/* Réglages globaux */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    background-color: #121212; /* Fond sombre */
+    color: #f0f0f0; /* Texte clair */
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Le conteneur principal qui centre la page */
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 25px;
+    background-color: #1e1e1e; /* Fond du bloc principal */
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Titre principal */
+h1 {
+    text-align: center;
+    color: #ffffff;
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    border-bottom: 3px solid #00aaff; /* Ligne bleue stylée */
+    padding-bottom: 15px;
+}
+
+/* Titres de section (Direction, Gestion, etc.) */
+h2 {
+    font-size: 2em;
+    color: #ffffff;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    border-left: 5px solid #00aaff; /* Barre bleue à gauche */
+    padding-left: 10px;
+}
+
+/* La grille qui contient les cartes */
+.card-grid {
+    display: grid;
+    /* C'est ce qui le rend responsive :
+       - Il essaie de mettre des colonnes de 280px
+       - S'il n'y a pas la place, il passe à la ligne */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+/* Les cartes individuelles (Fondateur, Manager, etc.) */
+.card {
+    background-color: #2a2a2a; /* Fond de la carte */
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Effet de lévitation au survol */
+    box-shadow: 0 5px 15px rgba(0, 170, 255, 0.2);
+}
+
+/* Titre du rôle (Fondateurs, Manager...) */
+.card h3 {
+    font-size: 1.4em;
+    color: #00aaff; /* Couleur accentuée bleue */
+    margin-bottom: 15px;
+}
+
+/* Liste des membres */
+.card ul {
+    list-style: none; /* Enlève les puces */
+}
+
+.card li {
+    font-size: 1.1em;
+    color: #f0f0f0;
+    margin-bottom: 5px;
+    padding-left: 10px;
+    border-left: 2px solid #555;
+}
+
+/* Style pour les postes vides */
+.card li.disponible {
+    color: #888;
+    font-style: italic;
+    border-left-color: #888;
+}
